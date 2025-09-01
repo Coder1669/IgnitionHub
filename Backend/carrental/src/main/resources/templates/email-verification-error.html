@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification Failed</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        .error-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .message {
+            color: #6c757d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #dc3545;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: transform 0.2s;
+            margin: 0 10px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon">❌</div>
+        <h1>Email Verification Failed</h1>
+        <div class="message">
+            We were unable to verify your email address.
+        </div>
+        <div class="error" th:if="${error}">
+            <strong>Error:</strong> <span th:text="${error}">Invalid or expired token</span>
+        </div>
+        <div class="message">
+            This usually happens when:
+            <ul style="text-align: left; margin: 1rem 0;">
+                <li>The verification link has expired</li>
+                <li>The link has already been used</li>
+                <li>The link is invalid or corrupted</li>
+            </ul>
+        </div>
+        <a href="http://localhost:3000/resend-verification" class="btn">Request New Verification Email</a>
+        <a href="http://localhost:3000/contact" class="btn btn-secondary">Contact Support</a>
+        <div class="footer">
+            If you continue to have problems, please contact our support team.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --background-dark: #0e0e0e;
+  --surface-dark: #1a1a1a;
+  --primary-accent: #3b82f6; /* Modern blue */
+  --primary-hover: #2563eb;
+  --text-light: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border-color: #2d2d2d;
+
+  --status-confirmed: #22c55e;
+  --status-pending: #facc15;
+  --status-cancelled: #6b7280;
+  --status-inprogress: #06b6d4;
+
+  --card-radius: 14px;
+  --transition-speed: 0.25s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #fff;
+}
+
+a {
+  color: var(--primary-accent);
+  transition: color var(--transition-speed) ease-in-out;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* --- 2. Navbar --- */
+.navbar.bg-dark {
+  background: rgba(26, 26, 26, 0.9) !important;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  padding: 1rem 2rem;
+}
+
+/* --- 3. Buttons --- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-accent), var(--primary-hover));
+  border: none;
+  border-radius: 8px;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+.btn-outline-light {
+  border: 1px solid var(--primary-accent);
+  color: var(--primary-accent);
+  border-radius: 8px;
+  transition: background var(--transition-speed);
+}
+.btn-outline-light:hover {
+  background: var(--primary-accent);
+  color: white;
+}
+
+/* --- 4. Car Cards (Homepage) --- */
+.card {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  color: var(--text-light);
+  backdrop-filter: blur(8px);
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.2);
+}
+.card-title {
+  color: #ffffff;
+}
+.card-text {
+  color: var(--text-muted);
+}
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* --- 5. Forms (Login, Register, Add Review) --- */
+.form-container {
+  max-width: 500px;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
+  background: rgba(26, 26, 26, 0.85);
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+.form-control, .form-select {
+  background-color: #202020;
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: border var(--transition-speed), box-shadow var(--transition-speed);
+}
+.form-control:focus, .form-select:focus {
+  background-color: #202020;
+  color: var(--text-light);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* --- 6. Tables (My Bookings & Admin) --- */
+.table {
+  --bs-table-bg: rgba(26, 26, 26, 0.9);
+  --bs-table-border-color: var(--border-color);
+  --bs-table-striped-bg: #2d2d2d;
+  --bs-table-striped-color: var(--text-light);
+  --bs-table-hover-bg: #3a3a3a;
+  --bs-table-hover-color: var(--text-light);
+  color: var(--text-light);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+.table thead th {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --- 7. Status Badges --- */
+.badge {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.badge.bg-success { background: var(--status-confirmed) !important; }
+.badge.bg-warning { background: var(--status-pending) !important; color: #121212 !important; }
+.badge.bg-secondary { background: var(--status-cancelled) !important; }
+.badge.bg-primary { background: var(--status-confirmed) !important; }
+.badge.bg-info { background: var(--status-inprogress) !important; }
+
+/* --- 8. Admin Panel --- */
+.sidebar {
+  background: linear-gradient(180deg, #0f172a, #1f2937) !important;
+  border-right: 1px solid var(--border-color);
+  min-height: 100vh;
+  padding-top: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+}

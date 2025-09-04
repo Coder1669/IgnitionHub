@@ -2,11 +2,6 @@
 
 Welcome to Ignition Hub! A full-stack web application designed to streamline the car rental process, providing a seamless and user-friendly experience for both customers and administrators.
 
-![Ignition Hub Demo](https://via.placeholder.com/800x400.png?text=Add+a+Screenshot+or+GIF+of+your+app+here!)
-_**(Note: Replace the image above with a real screenshot or GIF of your running application. You can use a tool like [Ezgif](https://ezgif.com/video-to-gif) to convert a screen recording to a GIF.)**_
-
----
-
 ## 📋 Table of Contents
 
 - [About The Project](#about-the-project)
@@ -15,11 +10,6 @@ _**(Note: Replace the image above with a real screenshot or GIF of your running 
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation & Setup](#installation--setup)
-- [API Endpoints](#-api-endpoints)
-- [Contact](#-contact)
-- [License](#-license)
-
----
 
 ## 📖 About The Project
 
